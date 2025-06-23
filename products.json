@@ -1,0 +1,122 @@
+[
+  {
+    "description": "Lada segar pilihan.",
+    "discount": 30,
+    "id": "product-1",
+    "image_url": "images/product-1.jpg",
+    "name": "Bell Pepper",
+    "original_price": 120000.00,
+    "price": 100000.00,
+    "stock": 50
+  },
+  {
+    "description": "Stroberi manis dan segar.",
+    "discount": 0,
+    "id": "product-2",
+    "image_url": "images/product-2.jpg",
+    "name": "Strawberry",
+    "original_price": null,
+    "price": 60000.00,
+    "stock": 100
+  },
+  {
+    "description": "Buncis hijau organik.",
+    "discount": 0,
+    "id": "product-3",
+    "image_url": "images/product-3.jpg",
+    "name": "Green Beans",
+    "original_price": null,
+    "price": 40000.00,
+    "stock": 75
+  },
+  {
+    "description": "Kol ungu segar.",
+    "discount": 0,
+    "id": "product-4",
+    "image_url": "images/product-4.jpg",
+    "name": "Purple Cabbage",
+    "original_price": null,
+    "price": 50000.00,
+    "stock": 60
+  },
+  {
+    "description": "Tomat merah segar.",
+    "discount": 30,
+    "id": "product-5",
+    "image_url": "images/product-5.jpg",
+    "name": "Tomatoe",
+    "original_price": 80000.00,
+    "price": 40000.00,
+    "stock": 90
+  },
+  {
+    "description": "Brokoli hijau segar.",
+    "discount": 0,
+    "id": "product-6",
+    "image_url": "images/product-6.jpg",
+    "name": "Brocolli",
+    "original_price": null,
+    "price": 20000.00,
+    "stock": 40
+  },
+  {
+    "description": "Wortel renyah.",
+    "discount": 0,
+    "id": "product-7",
+    "image_url": "images/product-7.jpg",
+    "name": "Carrots",
+    "original_price": null,
+    "price": 15000.00,
+    "stock": 120
+  },
+  {
+    "description": "Jus buah segar.",
+    "discount": 0,
+    "id": "product-8",
+    "image_url": "images/product-8.jpg",
+    "name": "Fruit Juice",
+    "original_price": null,
+    "price": 70000.00,
+    "stock": 80
+  },
+  {
+    "description": "Bawang bombay.",
+    "discount": 30,
+    "id": "product-9",
+    "image_url": "images/product-9.jpg",
+    "name": "Onion",
+    "original_price": 120000.00,
+    "price": 100000.00,
+    "stock": 70
+  },
+  {
+    "description": "Apel merah segar.",
+    "discount": 0,
+    "id": "product-10",
+    "image_url": "images/product-10.jpg",
+    "name": "Apple",
+    "original_price": null,
+    "price": 80000.00,
+    "stock": 110
+  },
+  {
+    "description": "Bawang putih.",
+    "discount": 0,
+    "id": "product-11",
+    "image_url": "images/product-11.jpg",
+    "name": "Garlic",
+    "original_price": null,
+    "price": 70000.00,
+    "stock": 95
+  },
+  {
+    "description": "Cabai pedas.",
+    "discount": 0,
+    "id": "product-12",
+    "image_url": "images/product-12.jpg",
+    "name": "Chilli",
+    "original_price": null,
+    "price": 50000.00,
+    "stock": 65
+  }
+]

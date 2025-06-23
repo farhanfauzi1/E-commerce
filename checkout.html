@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Farhan Shop - Checkout</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+	<style>
+		.text-danger {
+		  color: #dc3545 !important;
+		}
+		
+		.is-invalid {
+		  border-color: #dc3545 !important;
+		  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23dc3545' viewBox='0 0 12 12'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+		  background-repeat: no-repeat;
+		  background-position: right calc(0.375em + 0.1875rem) center;
+		  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+		}
+		
+		.spinner-border {
+		  display: inline-block;
+		  width: 1rem;
+		  height: 1rem;
+		  vertical-align: text-bottom;
+		  border: 0.2em solid currentColor;
+		  border-right-color: transparent;
+		  border-radius: 50%;
+		  animation: spinner-border .75s linear infinite;
+		}
+		
+		@keyframes spinner-border {
+		  to { transform: rotate(360deg); }
+		}
+
+    .message-box {
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        text-align: center;
+        display: none; /* Hidden by default */
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1000;
+        width: 80%;
+        max-width: 400px;
+      }
+      .message-box.success {
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+      }
+      .message-box.error {
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+      }
+	  </style>
+	  
+  </head>
+  <body class="goto-here">
+		<div class="py-1 bg-primary">
+    	<div class="container">
+    		<div class="row no-gutters d-flex align-items-start align-items-center px-md-0">
+	    		<div class="col-lg-12 d-block">
+		    		<div class="row d-flex">
+		    			<div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
+						    <span class="text">+ 1235 2355 98</span>
+					    </div>
+					    <div class="col-md pr-4 d-flex topper align-items-center">
+					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
+						    <span class="text">youremail@email.com</span>
+					    </div>
+					    <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
+						    <span class="text">3-5 Business days delivery &amp; Free Returns</span>
+							<script src="js/checkout-validator.js"></script>
+					    </div>
+				    </div>
+			    </div>
+		    </div>
+		  </div>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Vegefoods</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+	          <li class="nav-item active dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+              	<a class="dropdown-item" href="shop.html">Shop</a>
+              	<a class="dropdown-item" href="wishlist.html">Wishlist</a>
+                <a class="dropdown-item" href="product-single.html">Single Product</a>
+                <a class="dropdown-item" href="cart.html">Cart</a>
+                <a class="dropdown-item" href="checkout.html">Checkout</a>
+              </div>
+            </li>
+	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	          <li class="nav-item cta cta-colored"><a href="cart.html" class="nav-link"><span class="icon-shopping_cart"></span><span id="cart-item-count">[0]</span></a></li>
+            <li class="nav-item"><a href="login.html" class="nav-link" id="login-logout-link">Login</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <div id="messageBox" class="message-box"></div>
+
+    <div class="hero-wrap hero-bread" style="background-image: url('images/bg_1.jpg');">
+      <div class="container">
+        <div class="row no-gutters slider-text align-items-center justify-content-center">
+          <div class="col-md-9 ftco-animate text-center">
+          	<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>Checkout</span></p>
+            <h1 class="mb-0 bread">Checkout</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="ftco-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-7 ftco-animate">
+                    <form id="checkoutForm" class="billing-form">
+                        <h3 class="mb-4 billing-heading">Detail Tagihan</h3>
+                        <div class="row align-items-end">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="firstname">Nama Lengkap</label>
+                                    <input type="text" class="form-control" id="fullName" placeholder="" required>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="streetaddress">Alamat Jalan</label>
+                                    <input type="text" class="form-control" id="address" placeholder="Nomor Rumah dan Nama Jalan" required>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="towncity">Kota / Kabupaten</label>
+                                    <input type="text" class="form-control" id="city" placeholder="" required>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="postcode">Kode Pos</label>
+                                    <input type="text" class="form-control" id="zipCode" placeholder="" required>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="phone">Telepon</label>
+                                    <input type="text" class="form-control" id="phone" placeholder="" required>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label for="emailaddress">Alamat Email</label>
+                                    <input type="text" class="form-control" id="email" placeholder="" required>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary py-3 px-4 mt-3">Lanjutkan ke Pembayaran</button>
+                    </form></div>
+                <div class="col-xl-5">
+                    <div class="row mt-5 pt-3">
+                        <div class="col-md-12 d-flex mb-5">
+                            <div class="cart-detail cart-total p-3 p-md-4">
+                                <h3 class="billing-heading mb-4">Total Keranjang</h3>
+                                <p class="d-flex">
+                                    <span>Subtotal</span>
+                                    <span id="checkout-subtotal">Rp.0</span>
+                                </p>
+                                <p class="d-flex">
+                                    <span>Pengiriman</span>
+                                    <span>Rp.0</span>
+                                </p>
+                                <p class="d-flex">
+                                    <span>Diskon</span>
+                                    <span>Rp.0</span>
+                                </p>
+                                <hr>
+                                <p class="d-flex total-price">
+                                    <span>Total</span>
+                                    <span id="checkout-total">Rp.0</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="cart-detail p-3 p-md-4">
+                                <h3 class="billing-heading mb-4">Metode Pembayaran</h3>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <div class="radio">
+                                           <label><input type="radio" name="optradio" class="mr-2" checked> Transfer Bank Langsung</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <div class="radio">
+                                           <label><input type="radio" name="optradio" class="mr-2"> Check Pembayaran</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <div class="radio">
+                                           <label><input type="radio" name="optradio" class="mr-2"> Paypal</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p><button type="button" id="placeOrderBtn" class="btn btn-primary py-3 px-4">Tempatkan Pesanan</button></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> <footer class="ftco-footer ftco-section">
+      <div class="container">
+      	<div class="row">
+      		<div class="mouse">
+						<a href="#" class="mouse-icon">
+							<div class="mouse-wheel"><span class="ion-ios-arrow-up"></span></div>
+						</a>
+					</div>
+      	</div>
+        <div class="row mb-5">
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Farhan</h2>
+              <p>Belanja sayur lebih mudah dan praktis.</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4 ml-md-5">
+              <h2 class="ftco-heading-2">Menu</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">Shop</a></li>
+                <li><a href="#" class="py-2 d-block">About</a></li>
+                <li><a href="#" class="py-2 d-block">Journal</a></li>
+                <li><a href="#" class="py-2 d-block">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md-4">
+             <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Bantuan</h2>
+              <div class="d-flex">
+	              <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
+	                <li><a href="#" class="py-2 d-block">Informasi Pengiriman</a></li>
+	                <li><a href="#" class="py-2 d-block">Pengembalian &amp; Penukaran</a></li>
+	                <li><a href="#" class="py-2 d-block">Syarat &amp; Ketentuan</a></li>
+	                <li><a href="#" class="py-2 d-block">Kebijakan Privasi</a></li>
+	              </ul>
+	              <ul class="list-unstyled">
+	                <li><a href="#" class="py-2 d-block">FAQ</a></li>
+	                <li><a href="#" class="py-2 d-block">Kontak</a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2">Ada Pertanyaan?</h2>
+            	<div class="block-23 mb-3">
+	              <ul>
+	                <li><span class="icon icon-map-marker"></span><span class="text">HPHX+XRG, Jl. Setu Pengasinan Indah No.27, Pengasinan, Kec. Sawangan, Kota Depok, Jawa Barat 16518</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+62 895363844053</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">fauzifarhan006@gmail.com</span></a></li>
+	              </ul>
+	            </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 text-center">
+
+            <p>Hak Cipta &copy;<script>document.write(new Date().getFullYear());</script> Semua hak dilindungi undang-undang <i class="icon-heart color-danger" aria-hidden="true"></i> oleh <a href="https://colorlib.com" target="_blank">Colorlib</a>
+						  </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    
+  
+
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    // Fungsi untuk menampilkan pesan
+    function showMessage(message, type) {
+      const messageBox = document.getElementById('messageBox');
+      messageBox.textContent = message;
+      messageBox.className = 'message-box ' + type; // Add type class (success or error)
+      messageBox.style.display = 'block';
+      setTimeout(() => {
+        messageBox.style.display = 'none';
+      }, 3000); // Sembunyikan pesan setelah 3 detik
+    }
+
+    // Fungsi untuk memperbarui jumlah item di keranjang pada navbar
+    function updateCartItemCount() {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const cartItemCountElement = document.getElementById('cart-item-count');
+        if (cartItemCountElement) {
+            cartItemCountElement.textContent = `[${cart.length}]`;
+        }
+    }
+
+    // Fungsi untuk memuat ringkasan keranjang di halaman checkout
+    function loadCheckoutSummary() {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let subtotal = 0;
+
+        cart.forEach(item => {
+            subtotal += item.price * item.quantity;
+        });
+
+        document.getElementById('checkout-subtotal').textContent = `Rp.${subtotal.toLocaleString('id-ID')}`;
+        document.getElementById('checkout-total').textContent = `Rp.${subtotal.toLocaleString('id-ID')}`;
+    }
+
+    // Fungsi untuk memeriksa status login saat halaman dimuat
+    function checkLoginStatus() {
+        const userToken = localStorage.getItem('userToken');
+        const username = localStorage.getItem('username');
+        const loginLogoutLink = document.getElementById('login-logout-link');
+
+        if (userToken && username) {
+            loginLogoutLink.textContent = `Logout (${username})`;
+            loginLogoutLink.href = '#'; // Ubah href menjadi # untuk logout
+            loginLogoutLink.addEventListener('click', handleLogout);
+        } else {
+            loginLogoutLink.textContent = 'Login';
+            loginLogoutLink.href = 'login.html';
+            loginLogoutLink.removeEventListener('click', handleLogout); // Hapus listener jika tidak login
+        }
+    }
+
+    // Fungsi untuk menangani logout
+    function handleLogout(e) {
+        e.preventDefault();
+        localStorage.removeItem('userToken');
+        localStorage.removeItem('username');
+        localStorage.removeItem('cart'); // Hapus keranjang saat logout
+        updateCartItemCount(); // Perbarui jumlah item di keranjang
+        checkLoginStatus(); // Perbarui tampilan login/logout
+        showMessage('Anda telah logout.', 'success');
+        // Redirect ke halaman login setelah logout
+        setTimeout(() => {
+            window.location.href = 'login.html';
+        }, 1500);
+    }
+
+    // Handle form checkout submission
+    document.getElementById('checkoutForm').addEventListener('submit', async function(e) {
+        e.preventDefault();
+        hideMessage(); // Sembunyikan pesan sebelumnya
+
+        const userToken = localStorage.getItem('userToken');
+        if (!userToken) {
+            showMessage('Anda harus login untuk melakukan checkout.', 'error');
+            setTimeout(() => {
+                window.location.href = 'login.html';
+            }, 1500);
+            return;
+        }
+
+        const fullName = document.getElementById('fullName').value;
+        const address = document.getElementById('address').value;
+        const city = document.getElementById('city').value;
+        const zipCode = document.getElementById('zipCode').value;
+        const phone = document.getElementById('phone').value;
+        const email = document.getElementById('email').value;
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+        if (cart.length === 0) {
+            showMessage('Keranjang Anda kosong. Tambahkan produk sebelum checkout.', 'error');
+            return;
+        }
+
+        const orderDetails = {
+            user_id: localStorage.getItem('username'), // Menggunakan username sebagai user_id sementara
+            full_name: fullName,
+            address: address,
+            city: city,
+            zip_code: zipCode,
+            phone: phone,
+            email: email,
+            items: cart,
+            total_amount: parseFloat(document.getElementById('checkout-total').textContent.replace('Rp.', '').replace(/\./g, '').replace(',', '.'))
+        };
+
+        try {
+            // Mengarahkan fetch ke server Flask (port 5000)
+            const response = await fetch('http://127.0.0.1:5000/place_order', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': `Bearer ${userToken}`
+                },
+                body: JSON.stringify(orderDetails),
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                showMessage(result.message, 'success');
+                localStorage.removeItem('cart'); // Kosongkan keranjang setelah checkout
+                updateCartItemCount(); // Perbarui jumlah di navbar
+                // Redirect atau tampilkan pesan sukses
+                setTimeout(() => {
+                    window.location.href = 'index.html'; // Kembali ke halaman utama
+                }, 2000);
+            } else {
+                showMessage(result.message, 'error');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            showMessage('Terjadi kesalahan saat memproses pesanan.', 'error');
+        }
+    });
+
+    // Panggil fungsi saat DOM selesai dimuat
+    document.addEventListener('DOMContentLoaded', () => {
+        updateCartItemCount();
+        checkLoginStatus();
+        loadCheckoutSummary(); // Muat ringkasan keranjang saat halaman dimuat
+    });
+  </script>
+  
+  </body>
+</html>
